@@ -22,7 +22,7 @@ public class SearchBarEuEn {
         By linkResult = By.xpath("//*[@id=\"app\"]/div[2]/div[2]/div/div/div[1]/div/div[2]/div[1]/div/div[1]");
 
 // Step 1. GO TO THE ARMORY WOWS URL EUROPE & ENGLISH
-        driver.get("https://armory.worldofwarships.com/en/");
+        driver.get("https://armory.worldofwarships.eu/en/");
 
         // Accept cookies
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -33,7 +33,7 @@ public class SearchBarEuEn {
         System.out.println(titleHomePage);
 
         //Are we are the correct URL?
-        Assert.assertEquals("https://armory.worldofwarships.com/en/", driver.getCurrentUrl());
+        Assert.assertEquals("https://armory.worldofwarships.eu/en/", driver.getCurrentUrl());
         String urlPage = driver.getCurrentUrl();
         System.out.println(urlPage);
 
