@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
-import static java.util.concurrent.TimeUnit.SECONDS;
+
 public class SearchBarEuEn {
-    //Search Bar Europe Region with English language
+    //Search Bar Europe Region with the English language
     @Test
 
     public void searchBar() {
@@ -32,7 +32,7 @@ public class SearchBarEuEn {
         String titleHomePage = driver.getTitle();
         System.out.println(titleHomePage);
 
-        //Are we are the correct URL?
+        //Are we on the correct URL?
         Assert.assertEquals("https://armory.worldofwarships.eu/en/", driver.getCurrentUrl());
         String urlPage = driver.getCurrentUrl();
         System.out.println(urlPage);
@@ -46,7 +46,7 @@ public class SearchBarEuEn {
         addSearch.click();
         addSearch.sendKeys("war");
 
-// Step 4. CHECK IF  A LIST OF RESULTS IS DISPLAYED
+// Step 4. CHECK IF A LIST OF RESULTS IS DISPLAYED
         boolean searchResultsDisplayed = driver.findElement(searchResults).isDisplayed();
         System.out.println("Search results are displayed :"+searchResultsDisplayed);
 
